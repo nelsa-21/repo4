@@ -1,6 +1,6 @@
 pipeline {
 
-    agent any
+    agent {label 'dilip-network'}
 
     environment {
 
@@ -17,7 +17,7 @@ pipeline {
             steps {
 
                 git branch: 'main',
-                url: 'git@github.com:nelsa-21/repo4.git' credentialId: 'dilip-github-cred'
+                url: 'git@github.com:nelsa-21/repo4.git' credentialsId: 'dilip-github-cred'
             }
         }
 
